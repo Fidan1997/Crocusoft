@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useMemo } from "react";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProduct } from "./../../store/reducers/productSlice";
 import { selectBasket, setOpen } from "./../../store/reducers/basketSlice";
 import { BasketItem } from "../../components";
-import { BasketDrawer } from "./Basket.style";
+import {
+  BasketDrawer,
+  EmptyBasketContainer,
+  EmptyBasketIcon,
+} from "./Basket.style";
 
 export const Basket = () => {
   const dispatch = useDispatch();
@@ -32,15 +36,26 @@ export const Basket = () => {
       onClose={() => dispatch(setOpen(false))}
       onOpen={() => dispatch(setOpen(true))}
     >
-      <Typography variant="h4" fontWeight={600}>
-        Your bag total is ${totalPrice}
-      </Typography>
-      {basketProductList.map((product) => (
-        <BasketItem
-          key={`${product.id}-${product.colorId}`}
-          product={product}
-        />
-      ))}
+      {basketProductList.length ? (
+        <Box>
+          <Typography variant="h4" fontWeight={600}>
+            Your bag total is ${totalPrice}
+          </Typography>
+          {basketProductList.map((product) => (
+            <BasketItem
+              key={`${product.id}-${product.colorId}`}
+              product={product}
+            />
+          ))}
+        </Box>
+      ) : (
+        <EmptyBasketContainer>
+          <EmptyBasketIcon />
+          <Typography variant="h4" fontWeight={600}>
+            Basket is empty
+          </Typography>
+        </EmptyBasketContainer>
+      )}
     </BasketDrawer>
   );
 };

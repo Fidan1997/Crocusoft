@@ -24,9 +24,9 @@ export const ProductItem = ({ product }) => {
   return (
     <ProductContainer container columnSpacing={6} key={product.id}>
       <ProductView item md={5} xs={12}>
-        <ProductCard>
+        <ProductCard size="large">
           <Link to={`/${product.id}/${activeColor}`}>
-            <ProductImage image={image} />
+            <ProductImage image={image} size="large" />
           </Link>
           <ColorPicker
             {...{

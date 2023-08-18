@@ -34,6 +34,7 @@ export const ProductView = styled(Grid)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   marginTop: theme.spacing(5),
+  cursor: "pointer",
 }));
 
 export const ProductInfo = styled(Grid)(({ theme }) => ({
@@ -44,15 +45,15 @@ export const ProductInfo = styled(Grid)(({ theme }) => ({
   marginTop: theme.spacing(5),
 }));
 
-export const ProductCard = styled(Box)(({ theme }) => ({
+export const ProductCard = styled(Box)(({ theme, size }) => ({
   overflow: "hidden",
   background: theme.palette.primary.light,
-  borderRadius: theme.spacing(4),
+  borderRadius: theme.spacing(size === "large" ? 4 : 2),
 }));
 
-export const ProductImage = styled(Box)(({ image, height, theme }) => ({
+export const ProductImage = styled(Box)(({ image, size, theme }) => ({
   width: "100%",
-  height: height ?? 360,
+  height: size === "large" ? 360 : 120,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat no-repeat",
   backgroundPosition: "center center",

@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 import { ButtonGroup, Button, Typography } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { selectColor } from "./../../store/reducers/colorSlice";
-import { addBasket, removeBasket } from "./../../store/reducers/basketSlice";
+import {
+  setOpen,
+  addBasket,
+  removeBasket,
+} from "./../../store/reducers/basketSlice";
 import {
   ProductContainer,
   ProductInfo,
@@ -18,6 +22,7 @@ import colorData from "./../../../data/colorData.json";
 
 export const BasketItem = ({ product }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { colorList } = useSelector(selectColor);
 
   const image = product.images.find(
@@ -29,11 +34,16 @@ export const BasketItem = ({ product }) => {
 
   return (
     <ProductContainer container columnSpacing={3} key={product.id}>
-      <ProductView item xs={3}>
-        <ProductCard>
-          <Link to={`/${product.id}/${product.colorId}`}>
-            <ProductImage image={image} height={120} />
-          </Link>
+      <ProductView
+        item
+        xs={3}
+        onClick={() => {
+          dispatch(setOpen(false));
+          navigate(`/${product.id}/${product.colorId}`);
+        }}
+      >
+        <ProductCard size="small">
+          <ProductImage image={image} size="small" />
         </ProductCard>
       </ProductView>
       <ProductInfo item xs={6}>

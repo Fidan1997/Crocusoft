@@ -65,9 +65,9 @@ export const ProductDetails = ({ product, colorId }) => {
         </ImageList>
       </ProductImgContainer>
       <ProductView item md={10} xs={12}>
-        <ProductCard>
+        <ProductCard size="large">
           <Link to={`/${product.id}/${colorId}`}>
-            <ProductImage image={activeImage?.image} />
+            <ProductImage image={activeImage?.image} size="large" />
           </Link>
         </ProductCard>
       </ProductView>
