@@ -7,7 +7,7 @@ import {
   getProduct,
   resetProduct,
 } from "./../store/reducers/productSlice";
-import { Loader, ProductDetails } from "../components";
+import { Loader, NotFound, ProductDetails } from "../components";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ const Product = () => {
           colorId={Number(colorId)}
         />
       ) : (
-        "No"
+        <NotFound />
       )}
     </Box>
   );
