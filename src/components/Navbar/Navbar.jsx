@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { AppBar, Box, Button, Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -7,7 +8,7 @@ import { Basket } from "./../../components";
 import { logoUrl } from "./../../constants";
 import { NavbarToolbar } from "./Navbar.style";
 
-export const Navbar = () => {
+export const Navbar = ({ isLoading }) => {
   const dispatch = useDispatch();
   const { basket } = useSelector(selectBasket);
 
@@ -22,7 +23,7 @@ export const Navbar = () => {
             <ShoppingCartIcon color="primary" />
           </Badge>
         </Button>
-        <Basket />
+        {!isLoading && <Basket />}
       </NavbarToolbar>
     </AppBar>
   );

@@ -5,7 +5,7 @@ export const LoaderContainer = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   position: "relative",
-  height: "100vh"
+  height: "calc(100vh - 112px)",
 }));
 
 export const LoaderItem = styled(Box)(() => ({

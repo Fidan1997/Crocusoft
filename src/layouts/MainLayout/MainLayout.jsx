@@ -31,14 +31,10 @@ export const MainLayout = () => {
     };
   }, [dispatch]);
 
-  return isLoading ? (
-    <Loader />
-  ) : (
+  return (
     <>
-      <Navbar />
-      <Container>
-        <Outlet />
-      </Container>
+      <Navbar isLoading={isLoading} />
+      <Container>{isLoading ? <Loader /> : <Outlet />}</Container>
     </>
   );
 };
