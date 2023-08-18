@@ -58,6 +58,75 @@
           "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/transparent/pc-studiobudsplus-transparent-earbuds-inside-outside.jpg"
         }
       ]
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "name": "Beats Studio Pro",
+      "price": 349.99,
+      "isNew": true,
+      "isSoldOut": false,
+      "colorIds": [4, 5, 6, 7],
+      "descriptions": [
+        {
+          "id": 5,
+          "title": "High-fidelity lossless audio via USB-C10"
+        },
+        {
+          "id": 6,
+          "title": "Personalized Spatial Audio with dynamic head tracking"
+        },
+        {
+          "id": 7,
+          "title": "Active Noise Cancelling (ANC) and Transparency mode"
+        },
+        {
+          "id": 8,
+          "title": "Up to 40 hours of listening time (ANC off)"
+        }
+      ],
+      "images": [
+        {
+          "id": 7,
+          "colorId": 4,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/black/pc-studiopro-black-thrqtr-right.jpg"
+        },
+        {
+          "id": 8,
+          "colorId": 4,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/black/pc-studiopro-black-side.jpg"
+        },
+        {
+          "id": 9,
+          "colorId": 5,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/deep-brown/pc-studiopro-deep-brown-thrqtr-right.jpg"
+        },
+        {
+          "id": 10,
+          "colorId": 5,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/deep-brown/pc-studiopro-deep-brown-side.jpg"
+        },
+        {
+          "id": 11,
+          "colorId": 6,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/navy/pc-studiopro-navy-thrqtr-right.jpg"
+        },
+        {
+          "id": 12,
+          "colorId": 6,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/navy/pc-studiopro-navy-side.jpg"
+        },
+        {
+          "id": 13,
+          "colorId": 7,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/sandstone/pc-studiopro-sandstone-thrqtr-right.jpg"
+        },
+        {
+          "id": 14,
+          "colorId": 7,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studiopro-wireless/pdp/product-carousel/sandstone/pc-studiopro-sandstone-side.jpg"
+        }
+      ]
     }
   ],
   "categories": [
@@ -67,6 +136,10 @@
   "colors": [
     { "id": 1, "title": " Black / Gold" },
     { "id": 2, "title": "Ivory" },
-    { "id": 3, "title": "Transparent" }
+    { "id": 3, "title": "Transparent" },
+    { "id": 4, "title": "Black" },
+    { "id": 5, "title": "Deep Brown" },
+    { "id": 6, "title": "Navy" },
+    { "id": 7, "title": "Sandstone" }
   ]
 }
