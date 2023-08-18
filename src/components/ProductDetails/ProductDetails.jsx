@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useState } from "react";
-import { ImageList, Button, Typography } from "@mui/material";
+import {
+  ImageList,
+  Button,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import AppleIcon from "@mui/icons-material/Apple";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,10 +27,13 @@ import {
 } from "../Product.style";
 
 export const ProductDetails = ({ product, colorId }) => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { colorList } = useSelector(selectColor);
   const [activeImage, setActiveImage] = useState(null);
+
+  const isMediumOrLarger = useMediaQuery(theme.breakpoints.up("md"));
 
   const images = useMemo(
     () => product.images.filter((image) => image.colorId === colorId),
@@ -37,8 +46,12 @@ export const ProductDetails = ({ product, colorId }) => {
 
   return (
     <ProductContainer container columnSpacing={6} key={product.id}>
-      <ProductImgContainer item xs={2}>
-        <ImageList cols={1} gap={16} sx={{ m: 0 }}>
+      <ProductImgContainer item md={2} xs={12}>
+        <ImageList
+          gap={16}
+          sx={{ m: 0 }}
+          {...(isMediumOrLarger ? { cols: 1 } : { cols: 5, rows: 1 })}
+        >
           {images.map((item) => (
             <ProductImgListItem
               isActive={item.id === activeImage?.id}
@@ -51,7 +64,7 @@ export const ProductDetails = ({ product, colorId }) => {
           ))}
         </ImageList>
       </ProductImgContainer>
-      <ProductView item xs={10}>
+      <ProductView item md={10} xs={12}>
         <ProductCard>
           <Link to={`/${product.id}/${colorId}`}>
             <ProductImage image={activeImage?.image} />
