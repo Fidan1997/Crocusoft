@@ -1,8 +1,7 @@
 import { Suspense, lazy } from "react";
 import { useRoutes } from "react-router-dom";
-import { CircularProgress } from "@mui/material";
 import { MainLayout } from "./layouts";
-import { NotFound } from "./components";
+import { Loader, NotFound } from "./components";
 
 const Products = lazy(() => import("./pages/Products"));
 const Product = lazy(() => import("./pages/Product"));
@@ -22,8 +21,7 @@ const routeList = [
 
 const App = () => {
   const routing = useRoutes(routeList);
-
-  return <Suspense fallback={<CircularProgress />}>{routing}</Suspense>;
+  return <Suspense fallback={<Loader fullHeight />}>{routing}</Suspense>;
 };
 
 export default App;
