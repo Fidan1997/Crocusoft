@@ -1,7 +1,6 @@
 import axios from "axios";
-import { baseUrl } from "./../constants";
 
 export const getCategoriesListService = async () => {
-  const response = await axios.get(`${baseUrl}/categories`);
+  const response = await axios.get("/api/categories");
   return response.data;
 };
