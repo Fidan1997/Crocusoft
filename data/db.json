@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Beats Studio Buds +",
+      "price": 169.99,
+      "isNew": true,
+      "isSoldOut": false,
+      "colorIds": [1, 2, 3],
+      "descriptions": [
+        {
+          "id": 1,
+          "title": "Improved Active Noise Cancelling (ANC) and Transparency mode"
+        },
+        {
+          "id": 2,
+          "title": "Up to 9 hours of listening time; 36 hours with charging case"
+        },
+        {
+          "id": 3,
+          "title": "3x larger microphones for improved call quality"
+        },
+        {
+          "id": 4,
+          "title": "ImpFour ear tip options to fit a wider range of ears"
+        }
+      ],
+      "images": [
+        {
+          "id": 1,
+          "colorId": 1,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/black/pc-studiobudsplus-black-case-open-floating.jpg"
+        },
+        {
+          "id": 2,
+          "colorId": 1,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/black/pc-studiobudsplus-black-earbuds-inside-outside.jpg"
+        },
+        {
+          "id": 3,
+          "colorId": 2,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/ivory/pc-studiobudsplus-ivory-case-open-floating.jpg"
+        },
+        {
+          "id": 4,
+          "colorId": 2,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/ivory/pc-studiobudsplus-ivory-earbuds-inside-outside.jpg"
+        },
+        {
+          "id": 5,
+          "colorId": 3,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/transparent/pc-studiobudsplus-transparent-case-open-floating.jpg"
+        },
+        {
+          "id": 6,
+          "colorId": 3,
+          "image": "https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/studio-buds-plus/pdp/product-carousel/transparent/pc-studiobudsplus-transparent-earbuds-inside-outside.jpg"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    { "id": 1, "title": "Wireless earbuds" },
+    { "id": 2, "title": "Wireless headphones" }
+  ],
+  "colors": [
+    { "id": 1, "title": " Black / Gold" },
+    { "id": 2, "title": "Ivory" },
+    { "id": 3, "title": "Transparent" }
+  ]
+}
