@@ -11,6 +11,8 @@ import { NavbarToolbar } from "./Navbar.style";
 export const Navbar = ({ isLoading }) => {
   const dispatch = useDispatch();
   const { basket } = useSelector(selectBasket);
+  
+  const count = basket.reduce((total, item) => total + item.count, 0);
 
   return (
     <AppBar position="sticky" color="secondary">
@@ -19,7 +21,7 @@ export const Navbar = ({ isLoading }) => {
           <Box height={40} component={"img"} src={logoUrl} />
         </Link>
         <Button color="inherit" onClick={() => dispatch(setOpen(true))}>
-          <Badge badgeContent={basket.length} color="primary">
+          <Badge badgeContent={count} color="primary">
             <ShoppingCartIcon color="primary" />
           </Badge>
         </Button>
